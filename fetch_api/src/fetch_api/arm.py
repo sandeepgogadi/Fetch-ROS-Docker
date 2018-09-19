@@ -8,6 +8,8 @@ import actionlib
 from .arm_joints import ArmJoints
 
 TIME_FROM_START = 5
+ARM_GROUP_NAME = 'arm'
+JOINT_ACTION_SERVER = 'arm_controller/follow_joint_trajectory'
 
 
 class Arm(object):
@@ -20,9 +22,9 @@ class Arm(object):
     """
 
     def __init__(self):
-        self._client = actionlib.SimpleActionClient(
-            'arm_controller/follow_joint_trajectory', control_msgs.msg.FollowJointTrajectoryAction)
-        self._client.wait_for_server()
+        self._joint_client = actionlib.SimpleActionClient(
+            JOINT_ACTION_SERVER, control_msgs.msg.FollowJointTrajectoryAction)
+        self._joint_client.wait_for_server(rospy.Duration(10))
 
     def move_to_joints(self, arm_joints):
         """Moves the robot's arm to the given joints.
@@ -43,6 +45,5 @@ class Arm(object):
         # Add the trajectory point created above to trajectory
         goal.trajectory.points = [trajPoint]
         # Send goal
-        self._client.send_goal(goal)
-        # Wait for result
-        self._client.wait_for_result()
+        self._joint_client.send_goal(goal)
+        self._joint_client.wait_for_result(rospy.Duration(10))
