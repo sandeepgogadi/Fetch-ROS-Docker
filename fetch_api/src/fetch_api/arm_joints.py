@@ -62,3 +62,31 @@ class ArmJoints(object):
             self.elbow_flex, self.forearm_roll, self.wrist_flex,
             self.wrist_roll
         ]
+
+    def set_shoulder_pan(self, val):
+        val = self._clamp_val(val, 'shoulder_pan')
+        self.shoulder_pan = val
+
+    def set_shoulder_lift(self, val):
+        val = self._clamp_val(val, 'shoulder_lift')
+        self.shoulder_lift = val
+
+    def set_upperarm_roll(self, val):
+        val = self._clamp_val(val, 'upperarm_roll')
+        self.upperarm_roll = val
+
+    def set_elbow_flex(self, val):
+        val = self._clamp_val(val, 'elbow_flex')
+        self.elbow_flex = val
+
+    def set_forearm_roll(self, val):
+        val = self._clamp_val(val, 'forearm_roll')
+        self.forearm_roll = val
+
+    def set_wrist_flex(self, val):
+        val = self._clamp_val(val, 'wrist_flex')
+        self.wrist_flex = val
+
+    def set_wrist_roll(self, val):
+        val = self._clamp_val(val, 'wrist_roll')
+        self.wrist_roll = val
