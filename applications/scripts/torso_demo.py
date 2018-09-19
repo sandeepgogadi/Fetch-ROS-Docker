@@ -1,6 +1,7 @@
 #! /usr/bin/env python
 
 import rospy
+import fetch_api
 
 
 def print_usage():
