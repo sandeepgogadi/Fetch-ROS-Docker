@@ -63,6 +63,18 @@ class ArmJoints(object):
             self.wrist_roll
         ]
 
+    def _clamp_val(self, val, joint_name):
+        if joint_name in ArmJoints.JOINT_LIMITS:
+            limits = ArmJoints.JOINT_LIMITS[joint_name]
+            min_val, max_val = limits[0], limits[1]
+            final_val = min(max(val, min_val), max_val)
+            if val != final_val:
+                rospy.logwarn('{} not in [{}, {}] for {} joint.'.format(
+                    val, min_val, max_val, joint_name))
+            return final_val
+        else:
+            return val
+
     def set_shoulder_pan(self, val):
         val = self._clamp_val(val, 'shoulder_pan')
         self.shoulder_pan = val
