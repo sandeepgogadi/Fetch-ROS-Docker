@@ -19,3 +19,8 @@
 `rosrun applications torso_demo.py 0.4`
 
 `rosrun applications torso_demo.py 0.0`
+
+### Head
+`rosrun applications head_demo.py look_at base_link 1 0 0.3`
+
+`rosrun applications head_demo.py pan_tilt 0 0`
