@@ -24,6 +24,9 @@ def main():
         return
     height = float(argv[1])
 
+    torso = fetch_api.Torso()
+    torso.set_height(height)
+
 
 if __name__ == '__main__':
     main()
