@@ -33,13 +33,13 @@ class Arm(object):
         # Create a trajectory point
         trajPoint = trajectory_msgs.msg.JointTrajectoryPoint()
         # Set position of trajectory point
-        trajPoint.positions = ArmJoints.values()
+        trajPoint.positions.extend(ArmJoints.values())
         # Set time of trajectory point
         trajPoint.time_from_start = rospy.Duration(TIME_FROM_START)
         # Create goal
         goal = control_msgs.msg.FollowJointTrajectoryGoal()
         # Add joint name to list
-        goal.trajectory.joint_names = ArmJoints.names()
+        goal.trajectory.joint_names.extend(ArmJoints.names())
         # Add the trajectory point created above to trajectory
         goal.trajectory.points = [trajPoint]
         # Send goal
