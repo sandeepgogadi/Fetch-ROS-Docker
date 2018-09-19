@@ -2,7 +2,7 @@
 
 import actionlib
 from control_msgs.msg import FollowJointTrajectoryAction, FollowJointTrajectoryGoal, PointHeadAction, PointHeadGoal
-from trajectory_msgs.msg import JointTrajectoryPoin
+from trajectory_msgs.msg import JointTrajectoryPoint
 import math
 import rospy
 
