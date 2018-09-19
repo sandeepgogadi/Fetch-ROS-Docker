@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git st
+git status
 git add .
-git ci -m "$1"
+git commit -m "$1"
 git push origin master

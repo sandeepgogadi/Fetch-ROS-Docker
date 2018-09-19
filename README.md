@@ -27,3 +27,6 @@
 
 ### Arm
 `rosrun applications arm_demo.py`
+
+### Joint States
+`rosrun applications joint_reader_demo.py`
