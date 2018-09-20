@@ -30,3 +30,6 @@
 
 ### Joint States
 `rosrun applications joint_reader_demo.py`
+
+### Rviz
+`rosrun rviz rviz -d /catkin_ws/src/Fetch-ROS-Docker/rviz/default.rviz`
