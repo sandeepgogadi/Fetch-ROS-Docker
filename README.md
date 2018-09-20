@@ -33,3 +33,7 @@
 
 ### Rviz
 `rosrun rviz rviz -d /catkin_ws/src/Fetch-ROS-Docker/rviz/default.rviz`
+
+### Text Markers
+`rosrun applications marker_text_demo.py`
+`rosrun rviz rviz -d /catkin_ws/src/Fetch-ROS-Docker/rviz/marker_text.rviz`
