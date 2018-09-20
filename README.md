@@ -56,5 +56,10 @@
 
 `rosrun applications base_demo.py rotate 30`
 
+### Building a Map
+`roslaunch applications build_map.launch`
+
+`rosrun map_server map_saver -f /catkin_ws/src/Fetch-ROS-Docker/maps/playground`
+
 
 
