@@ -36,4 +36,10 @@
 
 ### Text Markers
 `rosrun applications marker_text_demo.py`
-`rosrun rviz rviz -d /catkin_ws/src/Fetch-ROS-Docker/rviz/marker_text.rviz`
+
+`rosrun rviz rviz -d /catkin_ws/src/Fetch-ROS-Docker/rviz/marker.rviz`
+
+### Path Markers
+`rosrun applications marker_path_demo.py`
+
+`rosrun rviz rviz -d /catkin_ws/src/Fetch-ROS-Docker/rviz/marker.rviz`
