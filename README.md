@@ -43,3 +43,5 @@
 `rosrun applications marker_path_demo.py`
 
 `rosrun rviz rviz -d /catkin_ws/src/Fetch-ROS-Docker/rviz/marker.rviz`
+
+`rosrun applications keyboard_teleop.py`
