@@ -45,3 +45,9 @@
 `rosrun rviz rviz -d /catkin_ws/src/Fetch-ROS-Docker/rviz/marker.rviz`
 
 `rosrun applications keyboard_teleop.py`
+
+### Interactive Markers
+`rosrun applications interactive_marker_demo.py`
+
+`rosrun rviz rviz -d /catkin_ws/src/Fetch-ROS-Docker/rviz/interactive_marker.rviz`
+
