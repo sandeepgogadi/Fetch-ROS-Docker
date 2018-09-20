@@ -51,3 +51,10 @@
 
 `rosrun rviz rviz -d /catkin_ws/src/Fetch-ROS-Docker/rviz/interactive_marker.rviz`
 
+### Driving with Odometry
+`rosrun applications base_demo.py move 0.1`
+
+`rosrun applications base_demo.py rotate 30`
+
+
+
