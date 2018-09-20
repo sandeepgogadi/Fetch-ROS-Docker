@@ -61,5 +61,7 @@
 
 `rosrun map_server map_saver -f /catkin_ws/src/Fetch-ROS-Docker/maps/playground`
 
+### Sending navigation goals
+`roslaunch applications nav_rviz.launch`
 
 
