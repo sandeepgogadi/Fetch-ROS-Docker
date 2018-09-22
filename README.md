@@ -64,4 +64,21 @@
 ### Sending navigation goals
 `roslaunch applications nav_rviz.launch`
 
+### Saving navigation goals
+`rosrun map_annotator annotator.py`
 
+### Cartesian spance manipulation
+`rosrun applications torso_demo.py 0.4`
+
+`roslaunch fetch_moveit_config move_group.launch`
+
+`rosrun applications cart_arm_demo.py`
+
+### Checking for reachability
+### Check the plan
+`rosrun applications check_cart_pose.py plan 0.5 0 1`
+
+`rosrun applications check_cart_pose.py plan 1 0 1`
+
+### IK
+`rosrun applications check_cart_pose.py ik 0.5 0 1`
