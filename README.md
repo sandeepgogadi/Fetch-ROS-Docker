@@ -84,3 +84,6 @@
 `rosrun applications check_cart_pose.py ik 0.5 0 1`
 
 ### Obstacle Avoidance
+`rosrun rviz rviz`
+
+`rosrun applications arm_obstacle_demo.py`
