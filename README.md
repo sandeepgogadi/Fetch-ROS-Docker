@@ -93,3 +93,6 @@
 `rosrun rviz rviz`
 
 `rosrun applications transformation_demo.py`
+
+### Fast IK
+`roslaunch fetch_api move_group.launch`
