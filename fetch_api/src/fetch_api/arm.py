@@ -324,4 +324,4 @@ class Arm(object):
         self._joint_client.cancel_all_goals()
 
 
-moveit_commander.os._exit(0)
+# moveit_commander.os._exit(0)
