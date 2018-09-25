@@ -16,7 +16,9 @@ def wait_for_time():
 def main():
     rospy.init_node('cart_arm_demo')
     wait_for_time()
+    argv = rospy.myargv()
 
+    planning_scene = PlanningSceneInterface('base_link')
     # Create table obstacle
     planning_scene.removeCollisionObject('table')
     table_size_x = 0.5
