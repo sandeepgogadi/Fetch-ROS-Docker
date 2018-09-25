@@ -5,7 +5,7 @@ import control_msgs.msg
 import geometry_msgs.msg
 import trajectory_msgs.msg
 import math
-import moveit_commander
+#import moveit_commander
 import rospy
 import tf
 
