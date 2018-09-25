@@ -75,10 +75,12 @@
 `rosrun applications cart_arm_demo.py`
 
 ### Checking for reachability
-### Check the plan
+#### Check the plan
 `rosrun applications check_cart_pose.py plan 0.5 0 1`
 
 `rosrun applications check_cart_pose.py plan 1 0 1`
 
-### IK
+#### IK
 `rosrun applications check_cart_pose.py ik 0.5 0 1`
+
+### Obstacle Avoidance
