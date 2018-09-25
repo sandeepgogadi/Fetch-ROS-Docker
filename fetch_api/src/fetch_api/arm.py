@@ -322,3 +322,6 @@ class Arm(object):
     def cancel_all_goals(self):
         self._move_group_client.cancel_all_goals()
         self._joint_client.cancel_all_goals()
+
+
+moveit_commander.os._exit(0)

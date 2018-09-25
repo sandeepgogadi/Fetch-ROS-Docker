@@ -67,7 +67,7 @@
 ### Saving navigation goals
 `rosrun map_annotator annotator.py`
 
-### Cartesian spance manipulation
+### Cartesian space manipulation
 `rosrun applications torso_demo.py 0.4`
 
 `roslaunch fetch_moveit_config move_group.launch`
