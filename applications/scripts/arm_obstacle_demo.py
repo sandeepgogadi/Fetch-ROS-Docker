@@ -4,6 +4,7 @@ import fetch_api
 import rospy
 from geometry_msgs.msg import Pose, Quaternion, PoseStamped, Point
 from moveit_python import PlanningSceneInterface
+from moveit_msgs.msg import OrientationConstraint
 
 
 def wait_for_time():
@@ -53,6 +54,15 @@ def main():
     pose2.pose.position.y = 0.3
     pose2.pose.position.z = 0.75
     pose2.pose.orientation.w = 1
+
+    oc = OrientationConstraint()
+    oc.header.frame_id = 'base_link'
+    oc.link_name = 'wrist_roll_link'
+    oc.orientation.w = 1
+    oc.absolute_x_axis_tolerance = 0.1
+    oc.absolute_y_axis_tolerance = 0.1
+    oc.absolute_z_axis_tolerance = 3.14
+    oc.weight = 1.0
 
     arm = fetch_api.Arm()
 
