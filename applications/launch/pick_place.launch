@@ -1,0 +1,21 @@
+<launch>
+
+  <!-- Start navigation -->
+  <include file="$(find fetch_navigation)/launch/fetch_nav.launch" >
+    <arg name="map_file" value="$(find fetch_gazebo_demo)/maps/test_zone.yaml" />
+  </include>
+
+  <!-- Start MoveIt -->
+  <include file="$(find fetch_moveit_config)/launch/move_group.launch" >
+    <arg name="info" value="true"/><!-- publish grasp markers -->
+  </include>
+
+  <!-- Start Perception -->
+  <node name="basic_grasping_perception" pkg="simple_grasping" type="basic_grasping_perception" >
+    <rosparam command="load" file="$(find fetch_gazebo_demo)/config/simple_grasping.yaml" />
+  </node>
+
+  <!-- Drive to the table, pick stuff up -->
+  <node name="Pick and Place" pkg="applications" type="pick_place.py" output="screen" />
+
+</launch>
