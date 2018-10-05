@@ -99,3 +99,7 @@
 
 ### Pick and Place
 `roslaunch applications pick_place.launch`
+
+![alt text](https://github.com/sandeepgogadi/Fetch-ROS-Docker/blob/master/pick.gif "Pick")
+
+![alt text](https://github.com/sandeepgogadi/Fetch-ROS-Docker/blob/master/place.gif "Place")
