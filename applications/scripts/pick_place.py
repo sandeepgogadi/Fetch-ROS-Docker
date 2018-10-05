@@ -228,13 +228,15 @@ if __name__ == "__main__":
     while not rospy.Time.now():
         pass
 
+    num_cubes = 1
+
     # Setup clients
     move_base = MoveBaseClient()
     torso_action = FollowTrajectoryClient("torso_controller", ["torso_lift_joint"])
     head_action = PointHeadClient()
     grasping_client = GraspingClient()
 
-    for i in range(4):
+    for i in range(num_cubes):
         # Move the base to be in front of the table
         # Demonstrates the use of the navigation stack
         rospy.loginfo("Moving to table...")

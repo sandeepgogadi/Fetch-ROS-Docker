@@ -96,3 +96,6 @@
 
 ### Fast IK
 `roslaunch fetch_api move_group.launch`
+
+### Pick and Place
+`roslaunch applications pick_place.launch`
